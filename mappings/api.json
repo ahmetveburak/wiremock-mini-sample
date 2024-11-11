@@ -1,0 +1,49 @@
+{
+    "mappings": [
+        {
+            "request": {
+                "method": "POST",
+                "url": "/service-1/api/validate"
+            },
+            "response": {
+                "status": 200,
+                "bodyFileName": "service-1/validate.json",
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST",
+                "url": "/service-1/api/validate-body",
+                "bodyPatterns": [
+                    {
+                        "matchesJsonPath": "$.data",
+                        "matches": ".*"
+                    }
+                ]
+            },
+            "response": {
+                "status": 200,
+                "bodyFileName": "service-1/validate.json",
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            }
+        },
+        {
+            "request": {
+                "method": "POST",
+                "url": "/service-2/api/create"
+            },
+            "response": {
+                "status": 201,
+                "bodyFileName": "service-2/create.json",
+                "headers": {
+                    "Content-Type": "application/json"
+                }
+            }
+        }
+    ]
+}

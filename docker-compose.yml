@@ -1,0 +1,10 @@
+services:
+  wiremock:
+    image: wiremock/wiremock
+    container_name: wiremock
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./mappings:/home/wiremock/mappings
+      - ./responses:/home/wiremock/__files
+    restart: unless-stopped

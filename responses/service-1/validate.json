@@ -1,0 +1,9 @@
+{
+  "message": "success",
+  "data": {
+    "name": "John Doe",
+    "dob": "01/01/1990",
+    "ssn": "123-45-6789",
+    "address": "123 Main St, Anytown, USA"
+  }
+}
